@@ -2,11 +2,11 @@ require('dotenv').config()
 const { Sequelize } = require('sequelize')
 const fs = require('fs')
 const path = require('path')
-const {DB_USER, DB_PASSWORD, DB_HOST, DB_NAME} = require('../config.js')
+const {DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT} = require('../config.js')
 
 const sequelize = new Sequelize(
     (() => {
-        const url = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`
+        const url = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`
         console.log(url)
         console.log(DB_USER)
         console.log(DB_HOST)
