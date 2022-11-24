@@ -46,7 +46,7 @@ const getGenres = async apiKey => {
             return genres
         }
     } catch (error) {
-        throw new Error('error in getGenres')
+        throw new Error(error)
     }
 }
 
