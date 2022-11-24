@@ -22,7 +22,7 @@ require('dotenv').config()
 const getGenres = require('./src/controllers/getGenres.js')
 const getPlatforms = require('./src/controllers/getPlatforms.js')
 const { conn } = require('./src/db.js')
-const {PORT, API_KEY} = require ('./config.js')
+const {PORT, API_KEY} = require ('./config')
 
 // Syncing all the models at once.
 async function main() {
